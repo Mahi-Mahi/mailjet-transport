@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MahiMahi\\MailjetTransport\\MailjetTransportServiceProvider"
+                "MahiMahi\\MailjetTransport\\MailjetTransportMailProvider"
             ]
         }
     }

@@ -9,6 +9,7 @@ class MailjetTransportManager extends TransportManager
 {
     protected function createMailjetDriver()
     {
+
         $config = $this->app['config']->get('mailjet', []);
 
         return new MailjetTransport(

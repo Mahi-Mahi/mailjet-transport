@@ -6,6 +6,10 @@ use Illuminate\Mail\Transport\Transport;
 use Mailjet\Resources;
 use Swift_Mime_SimpleMessage;
 
+use MahiMahi\MailjetTransport\Exception\MailjetError;
+
+use Log;
+
 class MailjetTransport extends Transport
 {
     /**
@@ -53,6 +57,10 @@ class MailjetTransport extends Transport
         }
 
         $response = $this->mailjet->post(Resources::$Email, ['body' => $payload]);
+
+        if( $response->getStatus() != 200 ):
+            throw MailjetError::defaultError($response->getBody());
+        endif;
 
         $this->sendPerformed($message);
 
