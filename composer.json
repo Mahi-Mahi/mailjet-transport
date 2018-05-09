@@ -10,7 +10,9 @@
     "authors": [
         {
             "name": "Olivier Mourlevat",
-            "email": "olivier.mourlevat@mahi-mahi.fr"
+            "email": "olivier.mourlevat@mahi-mahi.fr",
+            "homepage": "https://mahi-mahi.fr",
+            "role": "Developper"
         }
     ],
     "require-dev": {
